@@ -1,3 +1,6 @@
  redis-server.exe redis.windows.conf
  redis-cli.exe -h 127.0.0.1 -p 6379
  redis-cli -h host -p port -a password
+ #性能测试
+ redis-benchmark -h 127.0.0.1 -p 6379 -t set,lpush -n 10000 -q
+ #redis管道
